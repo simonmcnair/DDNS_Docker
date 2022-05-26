@@ -14,9 +14,9 @@ jobs:
     environment: production
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build --tag my-image-name:$(date +%s) build
+#    - uses: actions/checkout@v3
+#    - name: Build the Docker image
+#      run: docker build --tag my-image-name:$(date +%s) build
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
@@ -39,7 +39,7 @@ jobs:
       with:
          image: simonmcnair/ddns
          registry: docker.io
-         #dockerfile: Dockerfile.ci
+         dockerfile: build/Dockerfile.
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
 
