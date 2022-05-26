@@ -37,7 +37,7 @@ jobs:
     - name: Build Docker4
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-         image: simonmcnair/DDNS
+         image: simonmcnair/ddns
          registry: docker.io
          #dockerfile: Dockerfile.ci
          username: ${{ secrets.DOCKER_USERNAME }}
